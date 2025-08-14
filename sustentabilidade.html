@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoVida - Preservando Nosso Planeta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #67e8f9 0%, #22c55e 100%); }
+        .eco-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .eco-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .tab-button.active { background-color: #10b981; color: white; }
+    </style>
+</head>
+<body class="bg-green-50">
+
+    <!-- Header -->
+    <header class="gradient-bg text-white py-6 shadow-lg">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="text-4xl">🌱</div>
+                <h1 class="text-3xl font-bold">EcoVida</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#preservacao" class="hover:text-green-200 transition-colors">Preservação</a>
+                <a href="#curiosidades" class="hover:text-green-200 transition-colors">Curiosidades</a>
+                <a href="#videos" class="hover:text-green-200 transition-colors">Vídeos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-20 text-center bg-green-100">
+        <h2 class="text-5xl font-bold text-gray-800 mb-6">Preserve o Meio Ambiente</h2>
+        <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+            Descubra práticas sustentáveis, curiosidades fascinantes e vídeos educativos
+            para proteger nosso planeta 🌍
+        </p>
+        <button onclick="scrollToSection('preservacao')" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg transition-colors">
+            Começar Agora
+        </button>
+    </section>
+
+    <!-- Preservação -->
+    <section id="preservacao" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">🌿 Práticas Sustentáveis</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="eco-card bg-green-100 p-6 rounded-xl">
+                    <div class="text-4xl mb-4">♻️</div>
+                    <h3 class="text-xl font-semibold mb-3">Reciclagem Inteligente</h3>
+                    <p class="text-gray-700 mb-4">Separe papel, plástico, vidro e metal. Reciclar economiza energia e recursos naturais.</p>
+                    <div class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm">💡 Dica: Lave as embalagens antes de descartar</div>
+                </div>
+                <div class="eco-card bg-blue-100 p-6 rounded-xl">
+                    <div class="text-4xl mb-4">💧</div>
+                    <h3 class="text-xl font-semibold mb-3">Economia de Água</h3>
+                    <p class="text-gray-700 mb-4">Feche a torneira ao escovar os dentes, tome banhos mais curtos e conserte vazamentos.</p>
+                    <div class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm">💡 Até 200L por dia por pessoa</div>
+                </div>
+                <div class="eco-card bg-yellow-100 p-6 rounded-xl">
+                    <div class="text-4xl mb-4">💡</div>
+                    <h3 class="text-xl font-semibold mb-3">Energia Limpa</h3>
+                    <p class="text-gray-700 mb-4">Use lâmpadas LED, aproveite luz natural e desligue aparelhos não usados.</p>
+                    <div class="bg-yellow-600 text-white px-4 py-2 rounded-lg text-sm">💡 LED usa 80% menos energia</div>
+                </div>
+                <div class="eco-card bg-purple-100 p-6 rounded-xl">
+                    <div class="text-4xl mb-4">🚲</div>
+                    <h3 class="text-xl font-semibold mb-3">Transporte Sustentável</h3>
+                    <p class="text-gray-700 mb-4">Use bicicleta, transporte público ou caminhe para reduzir a pegada de carbono.</p>
+                    <div class="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm">💡 1km de bike = 0kg de CO₂</div>
+                </div>
+                <div class="eco-card bg-red-100 p-6 rounded-xl">
+                    <div class="text-4xl mb-4">🌱</div>
+                    <h3 class="text-xl font-semibold mb-3">Alimentação Consciente</h3>
+                    <p class="text-gray-700 mb-4">Prefira alimentos locais e orgânicos e reduza desperdícios.</p>
+                    <div class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm">💡 Agricultura local reduz transporte</div>
+                </div>
+                <div class="eco-card bg-indigo-100 p-6 rounded-xl">
+                    <div class="text-4xl mb-4">🛍️</div>
+                    <h3 class="text-xl font-semibold mb-3">Consumo Consciente</h3>
+                    <p class="text-gray-700 mb-4">Compre apenas o necessário, reutilize objetos e escolha produtos com menos embalagem.</p>
+                    <div class="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm">💡 Reduzir, Reutilizar, Reciclar</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curiosidades -->
+    <section id="curiosidades" class="py-20 bg-green-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">🔍 Curiosidades Ambientais</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="eco-card bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4">🌲 Pulmão do Mundo</h3>
+                    <p>A Amazônia possui mais de 400 bilhões de árvores! Uma árvore grande produz oxigênio para 2 pessoas/dia.</p>
+                </div>
+                <div class="eco-card bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-purple-600 mb-4">🐝 Abelhas Essenciais</h3>
+                    <p>As abelhas polinizam 80% das plantas com flores, fundamentais para nossa alimentação.</p>
+                </div>
+                <div class="eco-card bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-red-600 mb-4">🌊 Ilhas de Plástico</h3>
+                    <p>O Pacífico possui uma “ilha” de plástico 3x maior que a França, com 80 mil toneladas de lixo!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vídeos -->
+    <section id="videos" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">🎥 Vídeos Educativos</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="https://www.youtube.com/watch?v=5F3g4A0mXjM" target="_blank" class="eco-card bg-green-100 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+                    <h3 class="text-xl font-semibold mb-3">Como Reciclar Corretamente</h3>
+                    <p>Aprenda o passo a passo da reciclagem doméstica e como separar cada tipo de material.</p>
+                </a>
+                <a href="https://www.youtube.com/watch?v=k7UGuQ3rYzE" target="_blank" class="eco-card bg-blue-100 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+                    <h3 class="text-xl font-semibold mb-3">10 Curiosidades do Meio Ambiente</h3>
+                    <p>Descubra fatos incríveis sobre florestas, oceanos e espécies animais.</p>
+                </a>
+                <a href="https://www.youtube.com/watch?v=ZRV7mD9e6Hc" target="_blank" class="eco-card bg-yellow-100 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+                    <h3 class="text-xl font-semibold mb-3">Como Ajudar o Planeta</h3>
+                    <p>Dicas práticas para reduzir impactos ambientais no dia a dia.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-12 text-center">
+        <h3 class="text-2xl font-bold mb-4">Juntos por um Planeta Melhor 🌍</h3>
+        <p>Cada pequena ação conta para preservar nosso meio ambiente</p>
+        <p class="mt-6 text-sm opacity-75">© 2025 EcoVida - Educação Ambiental</p>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({behavior:'smooth'});
+        }
+    </script>
+</body>
+</html>
